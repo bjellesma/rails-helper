@@ -15,5 +15,5 @@ PAUSE
 start railsinstaller-%rubyInstallerVersion%.exe
 echo "press any key when install is complete. We must open a new window to refresh variables"
 PAUSE
-cd ../dropbox
+cd %USERPROFILE%/downloads/rails-helper-master
 start rubyinstall2.bat
