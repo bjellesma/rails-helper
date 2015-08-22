@@ -1,5 +1,6 @@
 ::variables
-set rubyInstallerVersion=3.1.0
+set /p rubyInstallerVersion="Enter the version of rails to install (Example: 3.1.0):"
+echo %rubyInstallerVersion%
 ::navigate to rubyinstaller for windows
 START https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-%rubyInstallerVersion%.exe
 ::TODO get curl and 7z
