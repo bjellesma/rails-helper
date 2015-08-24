@@ -19,15 +19,11 @@ FOR /F "delims=" %%i IN ('rails --version') DO set railsInstalledVersion=%%i
 if defined railsInstalledVersion echo rails is installed
 if not defined railsInstalledVersion echo ERROR: rails is not installed. Go back and make sure it is installed
 PAUSE
+set /p rubyPath="Enter the path where you would like to create a new rails application (Enter the full path): "
 ::create test rails application
-cd %USERPROFILE%
-mkdir RubyTestDir
-cd RubyTestDir
-::rails new railsTest
-cd railsTest
-
-start www.localhost:3000
-::bundle install
-ruby bin/rails server
-
+cd "%rubyPath%"
+set /p rubyProject="Enter the name of your new application: "
+rails new "%rubyProject%"
 PAUSE
+cd "%rubyProject%"
+
