@@ -9,13 +9,11 @@ START https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-%rubyInstal
 ::TODO start http://www.7-zip.org/a/7za920.zip
 ::TODO curl to get pem
 ::navigate to downloads dir
-cd %USERPROFILE%/downloads
 ::wait for download
 echo "press any key when download is complete"
 PAUSE
 ::run installer for ruby
-start railsinstaller-%rubyInstallerVersion%.exe
+start %USERPROFILE%/downloads/railsinstaller-%rubyInstallerVersion%.exe
 echo "press any key when install is complete. We must open a new window to refresh variables"
 PAUSE
-cd %USERPROFILE%/downloads/rails-helper-master/rails-helper-master
 start rubyinstall2.bat
